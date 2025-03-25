@@ -26,7 +26,7 @@ console.log(es2());
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
 */
 
-const es3 = (evenNum) => evenNum.filter((num) => num % 2 === 0);
+const es3 = evenNum => evenNum.filter(num => num % 2 === 0);
 
 console.log(es3([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
 
@@ -36,8 +36,8 @@ console.log(es3([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
 
 let sum = 0;
 
-const es4 = (addNum) => {
-  addNum.forEach((num) => (sum += num));
+const es4 = addNum => {
+  addNum.forEach(num => (sum += num));
   return sum;
 };
 
@@ -47,7 +47,7 @@ console.log(es4([1, 2, 3, 4, 10]));
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
 
-const es5 = (addNum2) => addNum2.reduce((total, num) => total + num, 0);
+const es5 = addNum2 => addNum2.reduce((total, num) => total + num, 0);
 
 console.log(es5([1, 2, 3, 4, 10]));
 
@@ -56,7 +56,7 @@ console.log(es5([1, 2, 3, 4, 10]));
 */
 
 const es6 = (onlyNum, n) => {
-  const incrNum = onlyNum.map((num) => num + n);
+  const incrNum = onlyNum.map(num => num + n);
   return incrNum;
 };
 
@@ -67,8 +67,8 @@ console.log(es6([1, 2, 3, 4, 5], 3));
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
 
-const es7 = (strArr) => {
-  const strLength = strArr.map((str) => str.length);
+const es7 = strArr => {
+  const strLength = strArr.map(str => str.length);
   return strLength;
 };
 
@@ -198,7 +198,7 @@ const movies = [
 const es9 = () => {
   let oldestMovie = movies[0];
 
-  movies.forEach((movie) => {
+  movies.forEach(movie => {
     if (parseInt(movie.Year) < parseInt(oldestMovie.Year)) {
       oldestMovie = movie;
     }
@@ -221,7 +221,7 @@ console.log(es10());
 */
 
 const es11 = () => {
-  const onlyTitle = movies.map((movie) => movie.Title);
+  const onlyTitle = movies.map(movie => movie.Title);
 
   return onlyTitle;
 };
@@ -233,7 +233,7 @@ console.log(es11());
 */
 
 const es12 = () => {
-  const ourMilleniumFilm = movies.filter((movie) => parseInt(movie.Year) > 1999);
+  const ourMilleniumFilm = movies.filter(movie => parseInt(movie.Year) > 1999);
   return ourMilleniumFilm;
 };
 
